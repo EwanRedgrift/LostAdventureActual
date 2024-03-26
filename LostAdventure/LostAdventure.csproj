@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -118,6 +118,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic Sound Effect No Copyright Free Download.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Game Button Click Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Effect Swords Clashing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple Crunch!.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumpingGoblin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knifeIcon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potionIcon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romanticalGoblins.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runningAway.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stoneIcon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timeTravel.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deadGoblin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblinCave.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblinFighting.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblinLady.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblinTransformation.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

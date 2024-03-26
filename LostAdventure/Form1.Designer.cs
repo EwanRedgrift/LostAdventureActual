@@ -29,6 +29,7 @@ namespace LostAdventure
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.option2Label = new System.Windows.Forms.Label();
             this.option1Label = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@ namespace LostAdventure
             this.storeLabel = new System.Windows.Forms.Label();
             this.usePotionButton = new System.Windows.Forms.PictureBox();
             this.usePotionLabel = new System.Windows.Forms.Label();
+            this.itemTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option2Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option1Button)).BeginInit();
@@ -96,7 +98,7 @@ namespace LostAdventure
             // 
             this.outputLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.Color.White;
-            this.outputLabel.Location = new System.Drawing.Point(11, 20);
+            this.outputLabel.Location = new System.Drawing.Point(11, 9);
             this.outputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(383, 82);
@@ -177,6 +179,7 @@ namespace LostAdventure
             this.goldOutput.Size = new System.Drawing.Size(268, 82);
             this.goldOutput.TabIndex = 14;
             this.goldOutput.Text = "GOLD";
+            this.itemTip.SetToolTip(this.goldOutput, "Your gold. You gain 1 peice per round");
             // 
             // storeGroupBox
             // 
@@ -245,10 +248,11 @@ namespace LostAdventure
             this.fancyrockLabel.Size = new System.Drawing.Size(225, 23);
             this.fancyrockLabel.TabIndex = 23;
             this.fancyrockLabel.Text = "Fancy Rock";
+            this.itemTip.SetToolTip(this.fancyrockLabel, "Just a rock. This does nothing");
             // 
             // fancyrockButton
             // 
-            this.fancyrockButton.Image = global::LostAdventure.Properties.Resources.arrowRight;
+            this.fancyrockButton.Image = global::LostAdventure.Properties.Resources.stoneIcon;
             this.fancyrockButton.Location = new System.Drawing.Point(13, 133);
             this.fancyrockButton.Margin = new System.Windows.Forms.Padding(2);
             this.fancyrockButton.Name = "fancyrockButton";
@@ -256,6 +260,7 @@ namespace LostAdventure
             this.fancyrockButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fancyrockButton.TabIndex = 24;
             this.fancyrockButton.TabStop = false;
+            this.itemTip.SetToolTip(this.fancyrockButton, "Buy rock (this is a waste)");
             this.fancyrockButton.Click += new System.EventHandler(this.fancyrockButton_Click);
             // 
             // PTTBuyLabel
@@ -279,11 +284,12 @@ namespace LostAdventure
             this.PTTLabel.Size = new System.Drawing.Size(225, 23);
             this.PTTLabel.TabIndex = 20;
             this.PTTLabel.Text = "Potion of Time Travel";
+            this.itemTip.SetToolTip(this.PTTLabel, "Sends you back to the previous page!");
             this.PTTLabel.UseCompatibleTextRendering = true;
             // 
             // PTTButton
             // 
-            this.PTTButton.Image = global::LostAdventure.Properties.Resources.arrowRight;
+            this.PTTButton.Image = global::LostAdventure.Properties.Resources.potionIcon;
             this.PTTButton.Location = new System.Drawing.Point(13, 20);
             this.PTTButton.Margin = new System.Windows.Forms.Padding(2);
             this.PTTButton.Name = "PTTButton";
@@ -291,6 +297,7 @@ namespace LostAdventure
             this.PTTButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PTTButton.TabIndex = 21;
             this.PTTButton.TabStop = false;
+            this.itemTip.SetToolTip(this.PTTButton, "Buy potion");
             this.PTTButton.Click += new System.EventHandler(this.PTTButton_Click);
             // 
             // knifePriceLabel
@@ -314,10 +321,11 @@ namespace LostAdventure
             this.knifeLabel.Size = new System.Drawing.Size(225, 23);
             this.knifeLabel.TabIndex = 18;
             this.knifeLabel.Text = "Knife";
+            this.itemTip.SetToolTip(this.knifeLabel, "Slices up nasty goblins!");
             // 
             // knifeButton
             // 
-            this.knifeButton.Image = global::LostAdventure.Properties.Resources.arrowRight;
+            this.knifeButton.Image = global::LostAdventure.Properties.Resources.knifeIcon;
             this.knifeButton.Location = new System.Drawing.Point(13, 75);
             this.knifeButton.Margin = new System.Windows.Forms.Padding(2);
             this.knifeButton.Name = "knifeButton";
@@ -325,6 +333,7 @@ namespace LostAdventure
             this.knifeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.knifeButton.TabIndex = 18;
             this.knifeButton.TabStop = false;
+            this.itemTip.SetToolTip(this.knifeButton, "Buy knife");
             this.knifeButton.Click += new System.EventHandler(this.knifeButton_Click);
             // 
             // storeButton
@@ -361,6 +370,7 @@ namespace LostAdventure
             this.usePotionButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.usePotionButton.TabIndex = 18;
             this.usePotionButton.TabStop = false;
+            this.itemTip.SetToolTip(this.usePotionButton, "Travel back in time");
             this.usePotionButton.Visible = false;
             this.usePotionButton.Click += new System.EventHandler(this.usePotionButton_Click);
             // 
@@ -442,6 +452,7 @@ namespace LostAdventure
         private System.Windows.Forms.PictureBox knifeButton;
         private System.Windows.Forms.PictureBox usePotionButton;
         private System.Windows.Forms.Label usePotionLabel;
+        private System.Windows.Forms.ToolTip itemTip;
     }
 }
 

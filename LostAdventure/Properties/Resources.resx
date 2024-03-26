@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apple_Crunch_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apple Crunch!.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="arcade_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arcade_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,7 +144,7 @@
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAANT9DwDU/Q8AAAEAAQoPAgAAANT9DwACUklGRsz9DwBXQVZFZm10IBAAAAAB
+        AQEBCQIAAAAAAAAA1P0PANT9DwDU/Q8AAAEAAQoPAgAAANT9DwACUklGRsz9DwBXQVZFZm10IBAAAAAB
         AAIARKwAABCxAgAEABAAZGF0Yaj9DwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQABAAEAAQABAAEAAQAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA//8AAP////////////////7////+/////v////7////9
@@ -17608,14 +17614,35 @@
         AP//AgD//wEA//8BAP//AQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
+  <data name="deadGoblin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deadGoblin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="deepBrush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deepBrush.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forestLake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forestLake.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="goblinCave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblinCave.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goblinFighting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblinFighting.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goblinLady" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblinLady.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goblinTransformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblinTransformation.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="green_50x50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green_50x50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jumpingGoblin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jumpingGoblin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jungle" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -33792,8 +33819,35 @@
         biBFZGlzb24uAABJU0ZUBwAAAEVkaXNvbgAACw==
 </value>
   </data>
+  <data name="knifeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\knifeIcon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magic_Sound_Effect_No_Copyright_Free_Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magic Sound Effect No Copyright Free Download.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Menu_Game_Button_Click_Sound_Effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu Game Button Click Sound Effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="potionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\potionIcon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="red_50x50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red_50x50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="romanticalGoblins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\romanticalGoblins.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="runningAway" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\runningAway.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_Effect_Swords_Clashing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound Effect Swords Clashing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="stoneIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stoneIcon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="timeTravel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\timeTravel.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yellow_50x50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow_50x50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

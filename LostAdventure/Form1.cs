@@ -23,6 +23,10 @@ namespace LostAdventure
         bool hasKnife;
         bool hasRock;
 
+        bool PTTCoolDown;
+
+        bool replay;
+
         //Random number generator
         Random randGen = new Random();
 
@@ -31,6 +35,7 @@ namespace LostAdventure
         SoundPlayer UIClick = new SoundPlayer(Properties.Resources.Menu_Game_Button_Click_Sound_Effect);
         SoundPlayer forestSound = new SoundPlayer(Properties.Resources.jungle);
         SoundPlayer crunchSound = new SoundPlayer(Properties.Resources.Apple_Crunch_);
+        SoundPlayer buySound = new SoundPlayer(Properties.Resources.cash_register_open);
 
         public Form1()
         {
@@ -52,6 +57,7 @@ namespace LostAdventure
         {
             goldOutput.Text = $"Gold: {goldCoins}";
         }
+
         private void option1Button_Click(object sender, EventArgs e)
         {
             /// Check what page we are currently on, and then flip
@@ -59,14 +65,32 @@ namespace LostAdventure
 
             prevPage = page;
 
+            UIClick.Play();
+            Thread.Sleep(200);
+
             if (page == 0)
             {
                 page = randGen.Next(1, 3);
-                DisplayPage();
             }
             else if (page == 1)
             {
                 page = 3;
+            }
+            else if (page == 2)
+            {
+                if (hasKnife == true)
+                {
+                    page = 5;
+                }
+                else if (randGen.Next(1, 11) != 1)
+                {
+                    page = 5;
+                }
+                else
+                {
+                    page = 6;
+                }
+                // random chance for page 5 or 6
             }
             else if (page == 3)
             {
@@ -83,10 +107,18 @@ namespace LostAdventure
             else if (page == 6)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 7)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 8)
             {
@@ -106,27 +138,50 @@ namespace LostAdventure
             else if (page == 10)
             {
                 page = 0;
-                prevPage = 10;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 11)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 12)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 13)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 14)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 15)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 16)
             {
@@ -135,39 +190,37 @@ namespace LostAdventure
             else if (page == 17)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 18)
             {
                 page = 0;
+
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
             else if (page == 19)
             {
                 page = 0;
 
+                numPotions = 0;
+                hasKnife = false;
+                hasRock = false;
             }
 
-            // MAIN PATH 2
-
-            else if (page == 2)
+            if (PTTCoolDown)
             {
-                if (hasKnife == true)
-                {
-                    page = 5;
-                }
-                else if (randGen.Next(1, 11) != 1)
-                {
-                    page = 5;
-                }
-                else
-                {
-                    page = 6;
-                }
+                PTTCoolDown = false;
 
-                // random chance for page 5 or 6
+                PTTOutputLabel.ForeColor = Color.White;
+                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
             }
 
             DisplayPage();
-            UIClick.Play();
         }
 
         private void option2Button_Click(object sender, EventArgs e)
@@ -179,9 +232,29 @@ namespace LostAdventure
 
             prevPage = page;
 
+            UIClick.Play();
+            Thread.Sleep(200);
+
             if (page == 1)
             {
                 page = 4;
+            }
+            else if (page == 2)
+            {
+
+                if (hasKnife == true)
+                {
+                    page = 8;
+                }
+                else if (randGen.Next(1, 5) != 1)
+                {
+                    page = 8;
+                }
+                else
+                {
+                    page = 7;
+                }
+                //Chance to go to either page 7 or 8
             }
             else if (page == 3)
             {
@@ -190,6 +263,14 @@ namespace LostAdventure
             else if (page == 5)
             {
                 page = 4;
+            }
+            else if (page == 6)
+            {
+                page = 99;
+            }
+            else if (page == 7)
+            {
+                page = 99;
             }
             else if (page == 8)
             {
@@ -206,49 +287,74 @@ namespace LostAdventure
             {
                 page = 17;
             }
+            else if (page == 10)
+            {
+                page = 99;
+            }
+            else if (page == 11)
+            {
+                page = 99;
+            }
+            else if (page == 12)
+            {
+                page = 99;
+            }
+            else if (page == 13)
+            {
+                page = 99;
+            }
+            else if (page == 14)
+            {
+                page = 99;
+            }
+            else if (page == 15)
+            {
+                page = 99;
+            }
             else if (page == 16)
             {
                 page = 19;
             }
-
-            //MAIN PATH 2
-
-            else if (page == 2)
+            else if (page == 18)
             {
-
-                if (hasKnife == true)
-                {
-                    page = 8;
-                }
-                else if (randGen.Next(1,5) != 1)
-                {
-                    page = 8;
-                }
-                else
-                {
-                    page = 7;
-                }
-                //Chance to go to either page 7 or 8
+                page = 99;
             }
-            else if (page == 8)
+            else if (page == 19)
             {
-                page = 15;
+                page = 99;
+            }
+
+            if (PTTCoolDown)
+            {
+                PTTCoolDown = false;
+
+                PTTOutputLabel.ForeColor = Color.White;
+                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
             }
 
             DisplayPage();
-            UIClick.Play();
         }
 
         private void option3Button_Click(object sender, EventArgs e)
         {
+            UIClick.Play();
+            Thread.Sleep(200);
+
             prevPage = page;
 
             if (page == 8) {
                 page = 15;
             }
 
+            if (PTTCoolDown)
+            {
+                PTTCoolDown = false;
+
+                PTTOutputLabel.ForeColor = Color.White;
+                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+            }
+
             DisplayPage();
-            UIClick.Play();
         }
 
         private void DisplayPage()
@@ -259,11 +365,13 @@ namespace LostAdventure
             switch (page)
             {
                 case 0:
+                    usePotionLabel.Enabled = false;
+                    usePotionButton.Visible = false;
+                    PTTOutputLabel.Enabled = false;
+
                     imageBox.Image = Properties.Resources.forest;
 
                     swordsSound.Stop();
-                    hasKnife = false;
-                    hasRock = false;
 
                     outputLabel.Text = "You are walking in a forest...";
 
@@ -283,7 +391,14 @@ namespace LostAdventure
                 case 1:
                     imageBox.Image = Properties.Resources.apple;
 
-                    outputLabel.Text = "And a yummy apple falls on your head!";
+                    if (numPotions > 0)
+                    {
+                        usePotionLabel.Enabled = true;
+                        usePotionButton.Visible = true;
+                        PTTOutputLabel.Enabled = true;
+                    }
+
+                    AnimateText(outputLabel, "And a yummy apple falls on your head!");
                     outputLabel.Text += $"\nDo you eat the apple?";
 
                     option1Button.Visible = true;
@@ -297,7 +412,14 @@ namespace LostAdventure
                 case 2:
                     imageBox.Image = Properties.Resources.jumpingGoblin;
 
-                    outputLabel.Text = "And a nasty goblin jumps at and attacks you!";
+                    if (numPotions > 0)
+                    {
+                        usePotionLabel.Enabled = true;
+                        usePotionButton.Visible = true;
+                        PTTOutputLabel.Enabled = true;
+                    }
+                    
+                    AnimateText(outputLabel, "And a nasty goblin jumps at and attacks you!");
                     outputLabel.Text += $"\nDo you fight or run?";
 
                     option1Button.Visible = true;
@@ -316,7 +438,7 @@ namespace LostAdventure
                     UpdateGold();
 
                     crunchSound.Play();
-                    outputLabel.Text = "Your skin turns green. Claws sprout from your finger tips. The apple has transformed into a goblin!";
+                    AnimateText(outputLabel, "Your skin turns green. Claws sprout from your finger tips. The apple has transformed you into a goblin!");
                     outputLabel.Text += $"\nFreak out or go about your new life?";
 
                     option1Label.Text = "Go about your new life";
@@ -329,7 +451,7 @@ namespace LostAdventure
                     goldCoins++;
                     UpdateGold();
 
-                    outputLabel.Text = "You kick the apple and continue walking...";
+                    AnimateText(outputLabel, "You kick the apple and continue walking...");
                     outputLabel.Text += $"\nRIGHT INTO ANOTHER UNIVERSE";
 
                     magicSpellSound.Play();
@@ -347,11 +469,11 @@ namespace LostAdventure
 
                     if (hasKnife == true)
                     {
-                        outputLabel.Text = "You slice up the goblin with your knife! He drops 5 gold coins and an apple";
+                        AnimateText(outputLabel, "You slice up the goblin with your knife! He drops 5 gold coins and an apple");
                     }
                     else
                     {
-                        outputLabel.Text = "You kill the goblin! He drops 5 gold coins and an apple";
+                        AnimateText(outputLabel, "You kill the goblin! He drops 5 gold coins and an apple");
                     }
 
                     outputLabel.Text += $"\nDo you eat the apple?";
@@ -364,7 +486,7 @@ namespace LostAdventure
                 case 6:
                     imageBox.Image = Properties.Resources.runningAway;
 
-                    outputLabel.Text = "He killed you terribly!";
+                    AnimateText(outputLabel, "He killed you terribly!");
                     outputLabel.Text += $"\nPlay again?";
 
                     swordsSound.Play();
@@ -374,7 +496,7 @@ namespace LostAdventure
                 case 7:
                     imageBox.Image = Properties.Resources.goblinFighting;
 
-                    outputLabel.Text = "The goblin cought up to you! You must fight! Oh wait... ";
+                    AnimateText(outputLabel, "The goblin cought up to you! You must fight! Oh wait... ");
                     outputLabel.Text += $"\nHe already killed you... Play again?";
 
                     swordsSound.Play();
@@ -389,12 +511,12 @@ namespace LostAdventure
 
                     if (hasKnife == true)
                     {
-                        outputLabel.Text = "The goblin catches up to you. You kill him with your knife and move into his goblin cave. Out of nowhere his wife apears!";
+                        AnimateText(outputLabel, "The goblin catches up to you. You kill him with your knife and move into his goblin cave. Out of nowhere his wife apears!");
                         outputLabel.Text += $"\nWhat will you do?";
                     }
                     else
                     {
-                        outputLabel.Text = "You escape the goblin by running into his own cave. You steal 25 of his gold. Out of nowhere his wife apears!";
+                        AnimateText(outputLabel, "You escape the goblin by running into his own cave. You steal 25 of his gold. Out of nowhere his wife apears!");
                         outputLabel.Text += $"\nWhat will you do?";
                     }
 
@@ -411,7 +533,7 @@ namespace LostAdventure
                     goldCoins++;
                     UpdateGold();
 
-                    outputLabel.Text = "After coming to your senses, you notice a cute goblin girl making eye contact with you.";
+                    AnimateText(outputLabel, "After coming to your senses, you notice a cute goblin girl making eye contact with you.");
                     outputLabel.Text += $"\nRizz?";
 
                     option1Label.Text = "Approach her";
@@ -420,7 +542,7 @@ namespace LostAdventure
                 case 10:
                     imageBox.Image = Properties.Resources.forest;
 
-                    outputLabel.Text = "You run off into the forest never to be seen again.";
+                    AnimateText(outputLabel, "You run off into the forest never to be seen again.");
                     outputLabel.Text += $"\nPlay again?";
 
                     option1Label.Text = "Yes";
@@ -429,7 +551,7 @@ namespace LostAdventure
                 case 11:
                     imageBox.Image = Properties.Resources.goblinCave;
 
-                    outputLabel.Text = "She thinks you're broke and eats you alive!";
+                    AnimateText(outputLabel, "She thinks you're broke and eats you alive!");
                     outputLabel.Text += $"\nPlay again?";
 
                     option3Label.Enabled = false;
@@ -441,7 +563,7 @@ namespace LostAdventure
                 case 12:
                     imageBox.Image = Properties.Resources.goblinCave;
 
-                    outputLabel.Text = "You two fall in love and live happily ever after.";
+                    AnimateText(outputLabel, "You two fall in love and live happily ever after.");
                     outputLabel.Text += $"\nPlay again?";
 
                     option3Label.Enabled = false;
@@ -453,7 +575,7 @@ namespace LostAdventure
                 case 13:
                     imageBox.Image = Properties.Resources.goblinCave;
 
-                    outputLabel.Text = "She chops you up into little peices.";
+                    AnimateText(outputLabel, "She chops you up into little peices.");
                     outputLabel.Text += $"\nPlay again?";
 
                     option3Label.Enabled = false;
@@ -466,7 +588,7 @@ namespace LostAdventure
                 case 14:
                     imageBox.Image = Properties.Resources.goblinCave;
 
-                    outputLabel.Text = "You chop her up with your knife and live in the stinky cave for the rest of your life.";
+                    AnimateText(outputLabel, "You chop her up with your knife and live in the stinky cave for the rest of your life.");
                     outputLabel.Text += $"\nPlay again?";
 
                     swordsSound.Play();
@@ -479,7 +601,7 @@ namespace LostAdventure
                 case 15:
                     imageBox.Image = Properties.Resources.goblinCave;
 
-                    outputLabel.Text = "She sees right past you...";
+                    AnimateText(outputLabel, "She sees right past you...");
                     outputLabel.Text += $"\nAnd kills you... Play again?";
 
                     swordsSound.Play();
@@ -495,7 +617,7 @@ namespace LostAdventure
                     goldCoins++;
                     UpdateGold();
 
-                    outputLabel.Text = "She likes your confidance. She asks you to meet her parrents.";
+                    AnimateText(outputLabel, "She likes your confidance. She asks you to meet her parents.");
                     outputLabel.Text += $"\nRizz the parents?";
 
                     option1Label.Text = "Accept";
@@ -506,14 +628,14 @@ namespace LostAdventure
                     {
                         imageBox.Image = Properties.Resources.deadGoblin;
 
-                        outputLabel.Text = "She tries to cast a spell on you. You kill her first with your knife. You die of loneliness.";
+                        AnimateText(outputLabel, "She tries to cast a spell on you. You kill her first with your knife. You die of loneliness.");
                         outputLabel.Text += $"\nPlay again?";
                     }
                     else
                     {
                         imageBox.Image = Properties.Resources.timeTravel;
 
-                        outputLabel.Text = "She casts a time travel spell on you and sends you back to the start";
+                        AnimateText(outputLabel, "She casts a time travel spell on you and sends you back to the start");
                         outputLabel.Text += $"\nYou loose all gold";
 
                         magicSpellSound.Play();
@@ -527,7 +649,7 @@ namespace LostAdventure
                 case 18:
                     imageBox.Image = Properties.Resources.romanticalGoblins;
 
-                    outputLabel.Text = "Her parents love you! You two live happily ever after";
+                    AnimateText(outputLabel, "Her parents love you! You two live happily ever after");
                     outputLabel.Text += $"\nPlay again?";
 
                     option1Label.Text = "Yes";
@@ -538,14 +660,14 @@ namespace LostAdventure
                     {
                         imageBox.Image = Properties.Resources.forest;
 
-                        outputLabel.Text = "Your girlfriend tries to eat you. But you slice her with your knife! You die of loneliness.";
+                        AnimateText(outputLabel, "Your girlfriend tries to eat you. But you slice her with your knife! You die of loneliness.");
                         outputLabel.Text += $"\nPlay again?";
                     }
                     else
                     {
                         imageBox.Image = Properties.Resources.runningAway;
 
-                        outputLabel.Text = "Your girlfriend eats you alive!";
+                        AnimateText(outputLabel, "Your girlfriend eats you alive!");
                         outputLabel.Text += $"\nPlay again?";
                         crunchSound.Play();
                     }
@@ -556,9 +678,11 @@ namespace LostAdventure
 
                     break;
                 case 99:
-                    outputLabel.Text = "Thank you for playing";
-                    option1Label.Text = "";
-                    option2Label.Text = "";
+                    AnimateText(outputLabel, "Thank you for playing");
+                    option1Label.Visible = false;
+                    option2Label.Visible = false;
+                    option1Button.Visible = false;
+                    option2Button.Visible = false;
                     Refresh();
                     Thread.Sleep(2000);
                     Application.Exit();
@@ -569,14 +693,24 @@ namespace LostAdventure
         }
 
         private void storeButton_Click(object sender, EventArgs e)
-        {
+        {   
             storeGroupBox.Enabled = true;
             storeGroupBox.Visible = true;
             UIClick.Play();
+
+            storeGroupBox.Text = string.Empty;
+            foreach (char c in "Store")
+            {
+                storeGroupBox.Text += c;
+                Refresh();
+                Thread.Sleep(100);
+            }
         }
 
         private void exitStoreButton_Click(object sender, EventArgs e)
         {
+            storeOutputLable.Text = "";
+
             storeGroupBox.Enabled = false;
             storeGroupBox.Visible = false;
             UIClick.Play();
@@ -596,13 +730,17 @@ namespace LostAdventure
                 usePotionButton.Enabled = true;
                 usePotionButton.Visible = true;
                 usePotionLabel.Enabled = true;
+                PTTOutputLabel.Enabled = true;
+
+                PTTOutputLabel.ForeColor = Color.White;
+                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
             }
             else
             {
                 storeOutputLable.ForeColor = Color.Red;
                 storeOutputLable.Text = $"Insufficient funds.";
             }
-            UIClick.Play();
+            buySound.Play();
         }
 
         private void knifeButton_Click(object sender, EventArgs e)
@@ -626,7 +764,7 @@ namespace LostAdventure
                 storeOutputLable.ForeColor = Color.Red;
                 storeOutputLable.Text = $"Insufficient funds";
             }
-            UIClick.Play();
+            buySound.Play();
         }
 
         private void fancyrockButton_Click(object sender, EventArgs e)
@@ -650,25 +788,53 @@ namespace LostAdventure
                 storeOutputLable.ForeColor = Color.Red;
                 storeOutputLable.Text = $"Insufficient funds";
             }
-            UIClick.Play();
+            buySound.Play();
         }
 
         private void usePotionButton_Click(object sender, EventArgs e)
         {
-            if (numPotions == 1)
-            {
-                usePotionButton.Enabled = false;
-                usePotionButton.Visible = false;
-                usePotionLabel.Enabled = false;
-            }
-            numPotions--;
-
-            magicSpellSound.Play();
-
-            page = prevPage;
-            DisplayPage();
             UIClick.Play();
+            Thread.Sleep(200);
+
+            if (page != 0 && PTTCoolDown == false)
+            {
+                if (numPotions == 1)
+                {
+                    usePotionButton.Enabled = false;
+                    usePotionButton.Visible = false;
+                    usePotionLabel.Enabled = false;
+                    PTTOutputLabel.Enabled = false;
+                }
+                numPotions--;
+
+                PTTOutputLabel.ForeColor = Color.White;
+                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+
+                magicSpellSound.Play();
+
+                page = prevPage;
+                DisplayPage();
+            }
+            else
+            {
+                PTTOutputLabel.ForeColor = Color.Red;
+                PTTOutputLabel.Text = "Cannot use";
+                //Stops potion from being used if on page 0 or just used
+            }
+
+            PTTCoolDown = true;
+        }
+
+        private async void AnimateText(Label label, string text)
+        {
+            Thread.Sleep(50);
+            label.Text = string.Empty;
+            foreach (char c in text)
+            {
+                label.Text += c;
+                Refresh();
+                Thread.Sleep(10);
+            }
         }
     }
-
 }

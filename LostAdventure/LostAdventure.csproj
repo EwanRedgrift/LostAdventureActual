@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\goblinTransformation.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash register open.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

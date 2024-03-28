@@ -17614,6 +17614,9 @@
         AP//AgD//wEA//8BAP//AQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
+  <data name="cash_register_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash register open.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="deadGoblin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deadGoblin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -17649,7 +17652,7 @@
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAABjNDgAYzQ4AAAEAAQoPAgAAABjNDgACUklGRhDNDgBXQVZFZm10IBAAAAAD
+        AQEBCQIAAAAAAAAAGM0OABjNDgAYzQ4AAAEAAQoPAgAAABjNDgACUklGRhDNDgBXQVZFZm10IBAAAAAD
         AAIARKwAACBiBQAIACAAZmFjdAQAAABw2QEAZGF0YYDLDgDVnie6kbi+OYBPNLqb1ds5QmY7uraP8jm+
         yDy60jQBOtuJOLr3jAU6guguuv1FBjr1TCC62W8DOuFEDbpaZ/o5pPzsuSak5zkxg7m5O0HPOULVgbmU
         DbI5r4YPucT0kDnMfNK3kO5ZOcmfsDivRA45bNNEOWgfgjgN/JM5yys5t+Bqvzk3M6u4h3rjOQweG7lG

@@ -57,6 +57,7 @@ namespace LostAdventure
             this.usePotionButton = new System.Windows.Forms.PictureBox();
             this.usePotionLabel = new System.Windows.Forms.Label();
             this.itemTip = new System.Windows.Forms.ToolTip(this.components);
+            this.PTTOutputLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option2Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option1Button)).BeginInit();
@@ -196,7 +197,7 @@ namespace LostAdventure
             this.storeGroupBox.Controls.Add(this.knifeButton);
             this.storeGroupBox.Enabled = false;
             this.storeGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.storeGroupBox.Location = new System.Drawing.Point(14, 119);
+            this.storeGroupBox.Location = new System.Drawing.Point(14, 106);
             this.storeGroupBox.Name = "storeGroupBox";
             this.storeGroupBox.Size = new System.Drawing.Size(380, 200);
             this.storeGroupBox.TabIndex = 15;
@@ -362,7 +363,7 @@ namespace LostAdventure
             // usePotionButton
             // 
             this.usePotionButton.Enabled = false;
-            this.usePotionButton.Image = global::LostAdventure.Properties.Resources.arrowRight;
+            this.usePotionButton.Image = global::LostAdventure.Properties.Resources.potionIcon;
             this.usePotionButton.Location = new System.Drawing.Point(272, 333);
             this.usePotionButton.Margin = new System.Windows.Forms.Padding(2);
             this.usePotionButton.Name = "usePotionButton";
@@ -386,12 +387,25 @@ namespace LostAdventure
             this.usePotionLabel.TabIndex = 19;
             this.usePotionLabel.Text = "Use Potion";
             // 
+            // PTTOutputLabel
+            // 
+            this.PTTOutputLabel.Enabled = false;
+            this.PTTOutputLabel.Font = new System.Drawing.Font("Courier New", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PTTOutputLabel.ForeColor = System.Drawing.Color.White;
+            this.PTTOutputLabel.Location = new System.Drawing.Point(312, 355);
+            this.PTTOutputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PTTOutputLabel.Name = "PTTOutputLabel";
+            this.PTTOutputLabel.Size = new System.Drawing.Size(225, 23);
+            this.PTTOutputLabel.TabIndex = 20;
+            this.PTTOutputLabel.Text = "x Potions";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(405, 422);
+            this.Controls.Add(this.PTTOutputLabel);
             this.Controls.Add(this.usePotionLabel);
             this.Controls.Add(this.usePotionButton);
             this.Controls.Add(this.storeLabel);
@@ -453,6 +467,7 @@ namespace LostAdventure
         private System.Windows.Forms.PictureBox usePotionButton;
         private System.Windows.Forms.Label usePotionLabel;
         private System.Windows.Forms.ToolTip itemTip;
+        private System.Windows.Forms.Label PTTOutputLabel;
     }
 }
 

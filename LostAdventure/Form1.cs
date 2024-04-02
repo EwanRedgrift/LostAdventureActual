@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+   _       _                 _                    ___                     
+  /_\   __| |_   _____ _ __ | |_ _   _ _ __ ___  / _ \__ _ _ __ ___   ___ 
+ //_\\ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \/ /_\/ _` | '_ ` _ \ / _ \
+/  _  \ (_| |\ V /  __/ | | | |_| |_| | | |  __/ /_\\ (_| | | | | | |  __/
+\_/ \_/\__,_| \_/ \___|_| |_|\__|\__,_|_|  \___\____/\__,_|_| |_| |_|\___|
+                                                                          
+Goblin Game
+By Ewan Redgrift
+4/2/2024
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -342,7 +354,8 @@ namespace LostAdventure
 
             prevPage = page;
 
-            if (page == 8) {
+            if (page == 8)
+            {
                 page = 15;
             }
 
@@ -418,7 +431,7 @@ namespace LostAdventure
                         usePotionButton.Visible = true;
                         PTTOutputLabel.Enabled = true;
                     }
-                    
+
                     AnimateText(outputLabel, "And a nasty goblin jumps at and attacks you!");
                     outputLabel.Text += $"\nDo you fight or run?";
 
@@ -693,7 +706,7 @@ namespace LostAdventure
         }
 
         private void storeButton_Click(object sender, EventArgs e)
-        {   
+        {
             storeGroupBox.Enabled = true;
             storeGroupBox.Visible = true;
             UIClick.Play();
@@ -722,7 +735,7 @@ namespace LostAdventure
             {
                 goldCoins -= 15;
                 numPotions++;
-                
+
                 storeOutputLable.ForeColor = Color.White;
                 storeOutputLable.Text = $"You have {numPotions} Potions.";
                 UpdateGold();

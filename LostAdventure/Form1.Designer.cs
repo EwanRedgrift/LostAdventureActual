@@ -423,7 +423,7 @@ namespace LostAdventure
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lost in a Forest";
+            this.Text = "Goblin Game";
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.option2Button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.option1Button)).EndInit();

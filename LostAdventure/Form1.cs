@@ -42,6 +42,7 @@ namespace LostAdventure
         //Random number generator
         Random randGen = new Random();
 
+        //All sounds
         SoundPlayer swordsSound = new SoundPlayer(Properties.Resources.Sound_Effect_Swords_Clashing);
         SoundPlayer magicSpellSound = new SoundPlayer(Properties.Resources.Magic_Sound_Effect_No_Copyright_Free_Download);
         SoundPlayer UIClick = new SoundPlayer(Properties.Resources.Menu_Game_Button_Click_Sound_Effect);
@@ -56,6 +57,7 @@ namespace LostAdventure
             imageBox.Image = Properties.Resources.forest;
             outputLabel.Text = "You are walking in a forest...";
 
+            //Random num of gold coins
             goldCoins = randGen.Next(10, 31);
             UpdateGold();
 
@@ -390,6 +392,7 @@ namespace LostAdventure
 
                     goldCoins = randGen.Next(10, 31);
                     UpdateGold();
+                    //random gold for replay
 
                     forestSound.Play();
                     option1Button.Visible = true;
@@ -838,7 +841,7 @@ namespace LostAdventure
             PTTCoolDown = true;
         }
 
-        private async void AnimateText(Label label, string text)
+        private async void AnimateText(Label label, string text) //typewriter effect
         {
             Thread.Sleep(50);
             label.Text = string.Empty;

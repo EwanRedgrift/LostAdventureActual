@@ -35,7 +35,7 @@ namespace LostAdventure
         bool hasKnife;
         bool hasRock;
 
-        bool PTTCoolDown;
+        bool potionCoolDown;
 
         bool replay;
 
@@ -226,12 +226,12 @@ namespace LostAdventure
                 hasRock = false;
             }
 
-            if (PTTCoolDown)
+            if (potionCoolDown)
             {
-                PTTCoolDown = false;
+                potionCoolDown = false;
 
-                PTTOutputLabel.ForeColor = Color.White;
-                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+                potionOutputLabel.ForeColor = Color.White;
+                potionOutputLabel.Text = $"{numPotions} Potion(s)";
             }
 
             DisplayPage();
@@ -338,12 +338,12 @@ namespace LostAdventure
                 page = 99;
             }
 
-            if (PTTCoolDown)
+            if (potionCoolDown)
             {
-                PTTCoolDown = false;
+                potionCoolDown = false;
 
-                PTTOutputLabel.ForeColor = Color.White;
-                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+                potionOutputLabel.ForeColor = Color.White;
+                potionOutputLabel.Text = $"{numPotions} Potion(s)";
             }
 
             DisplayPage();
@@ -361,12 +361,12 @@ namespace LostAdventure
                 page = 15;
             }
 
-            if (PTTCoolDown)
+            if (potionCoolDown)
             {
-                PTTCoolDown = false;
+                potionCoolDown = false;
 
-                PTTOutputLabel.ForeColor = Color.White;
-                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+                potionOutputLabel.ForeColor = Color.White;
+                potionOutputLabel.Text = $"{numPotions} Potion(s)";
             }
 
             DisplayPage();
@@ -382,7 +382,7 @@ namespace LostAdventure
                 case 0:
                     usePotionLabel.Enabled = false;
                     usePotionButton.Visible = false;
-                    PTTOutputLabel.Enabled = false;
+                    potionOutputLabel.Enabled = false;
 
                     imageBox.Image = Properties.Resources.forest;
 
@@ -411,7 +411,7 @@ namespace LostAdventure
                     {
                         usePotionLabel.Enabled = true;
                         usePotionButton.Visible = true;
-                        PTTOutputLabel.Enabled = true;
+                        potionOutputLabel.Enabled = true;
                     }
 
                     AnimateText(outputLabel, "And a yummy apple falls on your head!");
@@ -432,7 +432,7 @@ namespace LostAdventure
                     {
                         usePotionLabel.Enabled = true;
                         usePotionButton.Visible = true;
-                        PTTOutputLabel.Enabled = true;
+                        potionOutputLabel.Enabled = true;
                     }
 
                     AnimateText(outputLabel, "And a nasty goblin jumps at and attacks you!");
@@ -732,7 +732,7 @@ namespace LostAdventure
             UIClick.Play();
         }
 
-        private void PTTButton_Click(object sender, EventArgs e)
+        private void potionButton_click(object sender, EventArgs e)
         {
             if (goldCoins >= 15)
             {
@@ -746,10 +746,10 @@ namespace LostAdventure
                 usePotionButton.Enabled = true;
                 usePotionButton.Visible = true;
                 usePotionLabel.Enabled = true;
-                PTTOutputLabel.Enabled = true;
+                potionOutputLabel.Enabled = true;
 
-                PTTOutputLabel.ForeColor = Color.White;
-                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+                potionOutputLabel.ForeColor = Color.White;
+                potionOutputLabel.Text = $"{numPotions} Potion(s)";
             }
             else
             {
@@ -812,19 +812,19 @@ namespace LostAdventure
             UIClick.Play();
             Thread.Sleep(200);
 
-            if (page != 0 && PTTCoolDown == false)
+            if (page != 0 && potionCoolDown == false)
             {
                 if (numPotions == 1)
                 {
                     usePotionButton.Enabled = false;
                     usePotionButton.Visible = false;
                     usePotionLabel.Enabled = false;
-                    PTTOutputLabel.Enabled = false;
+                    potionOutputLabel.Enabled = false;
                 }
                 numPotions--;
 
-                PTTOutputLabel.ForeColor = Color.White;
-                PTTOutputLabel.Text = $"{numPotions} Potion(s)";
+                potionOutputLabel.ForeColor = Color.White;
+                potionOutputLabel.Text = $"{numPotions} Potion(s)";
 
                 magicSpellSound.Play();
 
@@ -833,12 +833,12 @@ namespace LostAdventure
             }
             else
             {
-                PTTOutputLabel.ForeColor = Color.Red;
-                PTTOutputLabel.Text = "Cannot use";
+                potionOutputLabel.ForeColor = Color.Red;
+                potionOutputLabel.Text = "Cannot use";
                 //Stops potion from being used if on page 0 or just used
             }
 
-            PTTCoolDown = true;
+            potionCoolDown = true;
         }
 
         private async void AnimateText(Label label, string text) //typewriter effect

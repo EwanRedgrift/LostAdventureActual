@@ -46,9 +46,9 @@ namespace LostAdventure
             this.fancyrockPrice = new System.Windows.Forms.Label();
             this.fancyrockLabel = new System.Windows.Forms.Label();
             this.fancyrockButton = new System.Windows.Forms.PictureBox();
-            this.PTTBuyLabel = new System.Windows.Forms.Label();
-            this.PTTLabel = new System.Windows.Forms.Label();
-            this.PTTButton = new System.Windows.Forms.PictureBox();
+            this.potionBuyLabel = new System.Windows.Forms.Label();
+            this.potionLabel = new System.Windows.Forms.Label();
+            this.potionButton = new System.Windows.Forms.PictureBox();
             this.knifePriceLabel = new System.Windows.Forms.Label();
             this.knifeLabel = new System.Windows.Forms.Label();
             this.knifeButton = new System.Windows.Forms.PictureBox();
@@ -57,7 +57,7 @@ namespace LostAdventure
             this.usePotionButton = new System.Windows.Forms.PictureBox();
             this.usePotionLabel = new System.Windows.Forms.Label();
             this.itemTip = new System.Windows.Forms.ToolTip(this.components);
-            this.PTTOutputLabel = new System.Windows.Forms.Label();
+            this.potionOutputLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option2Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.option1Button)).BeginInit();
@@ -65,7 +65,7 @@ namespace LostAdventure
             this.storeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitStoreButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fancyrockButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTTButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knifeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usePotionButton)).BeginInit();
@@ -189,9 +189,9 @@ namespace LostAdventure
             this.storeGroupBox.Controls.Add(this.fancyrockPrice);
             this.storeGroupBox.Controls.Add(this.fancyrockLabel);
             this.storeGroupBox.Controls.Add(this.fancyrockButton);
-            this.storeGroupBox.Controls.Add(this.PTTBuyLabel);
-            this.storeGroupBox.Controls.Add(this.PTTLabel);
-            this.storeGroupBox.Controls.Add(this.PTTButton);
+            this.storeGroupBox.Controls.Add(this.potionBuyLabel);
+            this.storeGroupBox.Controls.Add(this.potionLabel);
+            this.storeGroupBox.Controls.Add(this.potionButton);
             this.storeGroupBox.Controls.Add(this.knifePriceLabel);
             this.storeGroupBox.Controls.Add(this.knifeLabel);
             this.storeGroupBox.Controls.Add(this.knifeButton);
@@ -264,42 +264,42 @@ namespace LostAdventure
             this.itemTip.SetToolTip(this.fancyrockButton, "Buy rock (this is a waste)");
             this.fancyrockButton.Click += new System.EventHandler(this.fancyrockButton_Click);
             // 
-            // PTTBuyLabel
+            // potionBuyLabel
             // 
-            this.PTTBuyLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTTBuyLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.PTTBuyLabel.Location = new System.Drawing.Point(13, 54);
-            this.PTTBuyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PTTBuyLabel.Name = "PTTBuyLabel";
-            this.PTTBuyLabel.Size = new System.Drawing.Size(268, 18);
-            this.PTTBuyLabel.TabIndex = 19;
-            this.PTTBuyLabel.Text = "GOLD: 15";
+            this.potionBuyLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.potionBuyLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.potionBuyLabel.Location = new System.Drawing.Point(13, 54);
+            this.potionBuyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.potionBuyLabel.Name = "potionBuyLabel";
+            this.potionBuyLabel.Size = new System.Drawing.Size(268, 18);
+            this.potionBuyLabel.TabIndex = 19;
+            this.potionBuyLabel.Text = "GOLD: 15";
             // 
-            // PTTLabel
+            // potionLabel
             // 
-            this.PTTLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTTLabel.ForeColor = System.Drawing.Color.White;
-            this.PTTLabel.Location = new System.Drawing.Point(56, 29);
-            this.PTTLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PTTLabel.Name = "PTTLabel";
-            this.PTTLabel.Size = new System.Drawing.Size(225, 23);
-            this.PTTLabel.TabIndex = 20;
-            this.PTTLabel.Text = "Potion of Time Travel";
-            this.itemTip.SetToolTip(this.PTTLabel, "Sends you back to the previous page!");
-            this.PTTLabel.UseCompatibleTextRendering = true;
+            this.potionLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.potionLabel.ForeColor = System.Drawing.Color.White;
+            this.potionLabel.Location = new System.Drawing.Point(56, 29);
+            this.potionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.potionLabel.Name = "potionLabel";
+            this.potionLabel.Size = new System.Drawing.Size(225, 23);
+            this.potionLabel.TabIndex = 20;
+            this.potionLabel.Text = "Potion of Time Travel";
+            this.itemTip.SetToolTip(this.potionLabel, "Sends you back to the previous page!");
+            this.potionLabel.UseCompatibleTextRendering = true;
             // 
-            // PTTButton
+            // potionButton
             // 
-            this.PTTButton.Image = global::LostAdventure.Properties.Resources.potionIcon;
-            this.PTTButton.Location = new System.Drawing.Point(13, 20);
-            this.PTTButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PTTButton.Name = "PTTButton";
-            this.PTTButton.Size = new System.Drawing.Size(39, 32);
-            this.PTTButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PTTButton.TabIndex = 21;
-            this.PTTButton.TabStop = false;
-            this.itemTip.SetToolTip(this.PTTButton, "Buy potion");
-            this.PTTButton.Click += new System.EventHandler(this.PTTButton_Click);
+            this.potionButton.Image = global::LostAdventure.Properties.Resources.potionIcon;
+            this.potionButton.Location = new System.Drawing.Point(13, 20);
+            this.potionButton.Margin = new System.Windows.Forms.Padding(2);
+            this.potionButton.Name = "potionButton";
+            this.potionButton.Size = new System.Drawing.Size(39, 32);
+            this.potionButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.potionButton.TabIndex = 21;
+            this.potionButton.TabStop = false;
+            this.itemTip.SetToolTip(this.potionButton, "Buy potion");
+            this.potionButton.Click += new System.EventHandler(this.potionButton_click);
             // 
             // knifePriceLabel
             // 
@@ -387,17 +387,17 @@ namespace LostAdventure
             this.usePotionLabel.TabIndex = 19;
             this.usePotionLabel.Text = "Use Potion";
             // 
-            // PTTOutputLabel
+            // potionOutputLabel
             // 
-            this.PTTOutputLabel.Enabled = false;
-            this.PTTOutputLabel.Font = new System.Drawing.Font("Courier New", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTTOutputLabel.ForeColor = System.Drawing.Color.White;
-            this.PTTOutputLabel.Location = new System.Drawing.Point(312, 355);
-            this.PTTOutputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PTTOutputLabel.Name = "PTTOutputLabel";
-            this.PTTOutputLabel.Size = new System.Drawing.Size(225, 23);
-            this.PTTOutputLabel.TabIndex = 20;
-            this.PTTOutputLabel.Text = "x Potions";
+            this.potionOutputLabel.Enabled = false;
+            this.potionOutputLabel.Font = new System.Drawing.Font("Courier New", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.potionOutputLabel.ForeColor = System.Drawing.Color.White;
+            this.potionOutputLabel.Location = new System.Drawing.Point(312, 355);
+            this.potionOutputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.potionOutputLabel.Name = "potionOutputLabel";
+            this.potionOutputLabel.Size = new System.Drawing.Size(225, 23);
+            this.potionOutputLabel.TabIndex = 20;
+            this.potionOutputLabel.Text = "x Potions";
             // 
             // Form1
             // 
@@ -405,7 +405,7 @@ namespace LostAdventure
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(405, 422);
-            this.Controls.Add(this.PTTOutputLabel);
+            this.Controls.Add(this.potionOutputLabel);
             this.Controls.Add(this.usePotionLabel);
             this.Controls.Add(this.usePotionButton);
             this.Controls.Add(this.storeLabel);
@@ -431,7 +431,7 @@ namespace LostAdventure
             this.storeGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exitStoreButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fancyrockButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTTButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knifeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usePotionButton)).EndInit();
@@ -458,16 +458,16 @@ namespace LostAdventure
         private System.Windows.Forms.Label fancyrockPrice;
         private System.Windows.Forms.Label fancyrockLabel;
         private System.Windows.Forms.PictureBox fancyrockButton;
-        private System.Windows.Forms.Label PTTBuyLabel;
-        private System.Windows.Forms.Label PTTLabel;
-        private System.Windows.Forms.PictureBox PTTButton;
+        private System.Windows.Forms.Label potionBuyLabel;
+        private System.Windows.Forms.Label potionLabel;
+        private System.Windows.Forms.PictureBox potionButton;
         private System.Windows.Forms.Label knifePriceLabel;
         private System.Windows.Forms.Label knifeLabel;
         private System.Windows.Forms.PictureBox knifeButton;
         private System.Windows.Forms.PictureBox usePotionButton;
         private System.Windows.Forms.Label usePotionLabel;
         private System.Windows.Forms.ToolTip itemTip;
-        private System.Windows.Forms.Label PTTOutputLabel;
+        private System.Windows.Forms.Label potionOutputLabel;
     }
 }
 
